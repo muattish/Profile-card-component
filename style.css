@@ -1,67 +1,108 @@
-:root{
---Dark-cyan: hsl(185, 75%, 39%);
---Very-dark-desaturated-blue: hsl(229, 23%, 23%);
---Dark-grayish-blue: hsl(227, 10%, 46%);
-}
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Kumbh Sans', sans-serif;
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
 }
 
-body{
-position: relative;
-width: 100vw;
-height: 720px;
-background: var(--Dark-cyan);
-background-repeat: no-repeat;
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Kumbh Sans", sans-serif;
 }
+
+body {
+    background-image: url("images/bg-pattern-top.svg"),
+        url("images/bg-pattern-bottom.svg");
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--Dark-cyan);
+    background-repeat: no-repeat no-repeat;
+    background-attachment: fixed;
+    background-position: 0% -50vh, 100% 50vh;
+}
+
+@media (max-width: 414px) {
+    body {
+        background-attachment: fixed;
+        background-position: 130% 550%, -25% -450%;
+    }
+}
+
 .container {
     margin-top: 172px;
 }
+
 .img-fluid {
     margin-top: 88px;
     margin-left: 121px;
     position: absolute;
-    border: 5px solid #FFFFFF;
+    border: 5px solid #ffffff;
     border-radius: 50%;
     max-width: 100%;
     height: auto;
 }
-.card-img-top{
+
+.card-img-top {
     border-radius: 15px 15px 0px 0px;
 }
+
 .col-md-4 {
-        padding: 0px;
-        width: 350px;
+    padding: 0px;
+    width: 350px;
 }
+
 .card {
     width: 350px;
     border-width: 0px !important;
     border-radius: 15px;
+    box-shadow: 0px 15px 25px 0px rgb(0 0 0 / 20%);
+    transition: 1s ease 0s;
 }
-.card-body{
+
+.card:hover {
+    transform: translate(0px, -10px);
+}
+
+.card-body {
     padding-bottom: 0px !important;
     padding-top: 0px !important;
 }
-.card-text{
+
+.card-text {
     margin-top: 75px;
 }
+
 span {
     color: var(--Very-dark-desaturated-blue);
     letter-spacing: 0.19em;
     font-size: 10px;
 }
+
 .card-text span {
     letter-spacing: 0em !important;
     font-size: 18px;
 }
+
 .fw-light {
+    color: var(--Dark-grayish-blue);
     margin-bottom: 0.5rem !important;
 }
+
 h5 {
     font-weight: bold;
 }
-.text-muted{
+
+.text-muted {
     font-weight: 400;
+}
+
+.attribution {
+    margin-top: 7em;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
