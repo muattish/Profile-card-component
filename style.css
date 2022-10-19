@@ -25,14 +25,12 @@ body {
     background-position: right 48vw bottom 40vh,
         left 45vw top 44vh;
 }
-
 @media (max-width: 414px) {
     body {
         background-attachment: fixed;
         background-position: 130% -50vh, -30% 50vh;
     }
 }
-
 .img-fluid {
     margin-top: 88px;
     margin-left: 121px;
@@ -42,11 +40,9 @@ body {
     max-width: 100%;
     height: auto;
 }
-
 .card-img-top {
     border-radius: 15px 15px 0px 0px;
 }
-
 .col-md-4 {
     padding: 0px;
     width: 350px;
