@@ -15,7 +15,7 @@ body {
         url("images/bg-pattern-bottom.svg");
     position: relative;
     width: 100vw;
-    min-height: 100vh;
+    max-height: 100vh;
     background-color: var(--Dark-cyan);
     background-repeat: no-repeat no-repeat;
     background-attachment: fixed;
@@ -25,7 +25,10 @@ body {
 @media (max-width: 414px) {
     body {
         background-attachment: fixed;
-        background-position: 130% 550%, -25% -450%;
+        background-position: 130% -50vh, -30% 50vh;
+    }
+    .container {
+        margin-top: 120px !important;
     }
 }
 
